@@ -65,9 +65,9 @@ val coreVerCode by extra(coreCommitCount)
 val coreVerName by extra(coreLatestTag)
 val coreVerHash by extra(coreCommitHash)
 val androidMinSdkVersion by extra(28)
-val androidTargetSdkVersion by extra(36)
+val androidTargetSdkVersion by extra(37)
 val androidCompileSdkVersion by extra(37)
-val androidCompileNdkVersion by extra("29.0.13113456")
+val androidCompileNdkVersion by extra("29.0.14206865")
 val androidBuildToolsVersion by extra("37.0.0")
 val androidSourceCompatibility by extra(JavaVersion.VERSION_21)
 val androidTargetCompatibility by extra(JavaVersion.VERSION_21)
@@ -120,7 +120,7 @@ fun Project.configureBaseExtension() {
                     // Vector master builds its hook engine as the `native` static lib under
                     // core/native, resolving core/external via a single VECTOR_ROOT.
                     arguments += "-DVECTOR_ROOT=${File(rootDir.absolutePath, "core")}"
-                    abiFilters("arm64-v8a", "armeabi-v7a", "x86", "x86_64")
+                    abiFilters("arm64-v8a")
                     val flags = arrayOf(
                         "-Wall",
                         "-Qunused-arguments",
