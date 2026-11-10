@@ -120,7 +120,7 @@ fun Project.configureBaseExtension() {
                     // Vector master builds its hook engine as the `native` static lib under
                     // core/native, resolving core/external via a single VECTOR_ROOT.
                     arguments += "-DVECTOR_ROOT=${File(rootDir.absolutePath, "core")}"
-                    abiFilters("arm64-v8a")
+                    abiFilters("arm64-v8a", "armeabi-v7a", "x86", "x86_64")
                     val flags = arrayOf(
                         "-Wall",
                         "-Qunused-arguments",
